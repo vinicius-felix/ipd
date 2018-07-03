@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Treinar mouse </title>
+		<link rel="stylesheet" type="text/css" href="./css/styles.css">
+	</head>
+	<body>
+		<div>
+
+			<p style="text-align: center; font-size: 25px"> Treinar Mouse </p>
+			<div id="bloco" onclick="changePosition();sizeOf();"><p target="bloco"> Clique aqui </p></div>
+
+		</div>
+	</body>
+
+	<script type="text/javascript">
+
+		function changePosition(){
+
+			var bloco	 = document.getElementById("bloco");	//Pega ID
+			var margTop  = getRandom(0, 487); 					//487 altura da janela
+			var margLeft = getRandom(0, 1256);  				//1256 largura da janela
+
+			margTop.toString();
+			margLeft.toString();
+
+			margTop  = margTop + "px";
+			margLeft = margLeft + "px";
+
+			bloco.style.marginTop  = margTop;
+			bloco.style.marginLeft = margLeft;
+
+		}//changePosition
+
+
+		function getRandom(min, max) {
+
+	  		return Math.random() * (max - min) + min;
+
+		}//getRandom
+
+
+		function sizeOf(){
+
+		  var windowWidth  = window.innerWidth;
+		  var windowHeight = window.innerHeight;
+		  
+		  var screenWidth  = screen.width;
+		  var screenHeight = screen.height;
+		  
+		  document.getElementById('window-size').innerHTML = 'Janela: ' + windowWidth + 'x' + windowHeight;
+		  document.getElementById('screen-size').innerHTML = 'Resolucao: ' + screenWidth + 'x' + screenHeight;
+
+		}//sizeOf
+
+	</script>
+
+</html>

@@ -1,0 +1,31 @@
+body{
+	background: url('../imgs/bkg2.png') center center no-repeat fixed;
+}
+
+.questao, .opcao, .resultado {
+	color: black;
+}
+
+.resultado {
+	font-size: 36px;
+	text-align: center;
+}
+
+button{
+	height: 75px;
+	width: 225px;
+}
+
+#bloco{
+	height: 100px;
+	width: 100px;
+	padding: 0px;
+	background-color: black;
+	color: yellow;
+	text-align: center;
+	border-radius: 50%;
+}
+
+p[target="bloco"]{
+	padding-top: 45%;
+}
